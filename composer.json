@@ -45,5 +45,11 @@
             "allow-contrib": false,
             "require": "4.4.*"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/A-horoshii/url-shrotener"
+        }
+    ]
 }
