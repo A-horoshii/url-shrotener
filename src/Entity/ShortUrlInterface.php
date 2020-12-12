@@ -1,5 +1,5 @@
 <?php
-namespace AHoroshii\UrlShortenerBundle\Entity;
+namespace Horoshii\UrlShortenerBundle\Entity;
 
 interface  ShortUrlInterface
 {

@@ -1,7 +1,7 @@
 <?php
-namespace AHoroshii\UrlShortenerBundle\Controller;
+namespace Horoshii\UrlShortenerBundle\Controller;
 
-use AHoroshii\UrlShortenerBundle\Entity\ShortUrl;
+use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -38,7 +38,7 @@ class UrlShortenerController extends AbstractController
             $shortUrl =  $this->get('horoshii_url_shortener.service.url_shortener')->createShortUrl($url, $ttl);
             if ($shortUrl instanceof ShortUrl) {
                 $params['shortUrl'] = $this->generateUrl(
-                    'AHoroshii_short_url_redirect',
+                    'Horoshii_short_url_redirect',
                     ['hash' => $shortUrl->getHash()],
                     UrlGeneratorInterface::ABSOLUTE_URL
                 );

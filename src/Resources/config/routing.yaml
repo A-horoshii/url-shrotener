@@ -1,8 +1,8 @@
-AHoroshii_short_url_redirect:
-  controller: AHoroshiiUrlShortenerBundle:UrlShortener:shortUrlRedirect
+horoshii_short_url_redirect:
+  controller: HoroshiiUrlShortenerBundle:UrlShortener:shortUrlRedirect
   path: /{hash}
   method: "GET"
 
-AHoroshii_short_url_create:
+horoshii_short_url_create:
   controller: AhorohsiiUrlShortenerBundle:UrlShortener:shortUrlCreate
   path: /short_url_create

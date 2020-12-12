@@ -1,6 +1,6 @@
 <?php
 
-namespace AHoroshii\UrlShortenerBundle\DependencyInjection;
+namespace Horoshii\UrlShortenerBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

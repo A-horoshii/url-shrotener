@@ -1,5 +1,5 @@
 {
-    "name": "AHoroshii/url-shortener-bundle",
+    "name": "horoshii/url-shortener-bundle",
     "description": "Url shortener bundle",
     "type": "symfony-bundle",
     "license": "proprietary",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "AHoroshii\\UrlShortenerBundle\\": "src"
+            "Horoshii\\UrlShortenerBundle\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AHoroshii\\UrlShortenerBundle\\Tests\\": "test"
+            "Horoshii\\UrlShortenerBundle\\Tests\\": "test"
         }
     },
     "replace": {
@@ -45,11 +45,5 @@
             "allow-contrib": false,
             "require": "4.4.*"
         }
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/A-horoshii/url-shrotener"
-        }
-    ]
+    }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace AHoroshii\UrlShortenerBundle\Repository;
+namespace Horoshii\UrlShortenerBundle\Repository;
 
-use AHoroshii\UrlShortenerBundle\Entity\ShortUrl;
+use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 

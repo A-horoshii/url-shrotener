@@ -1,5 +1,5 @@
 <?php
-namespace AHoroshii\UrlShortenerBundle;
+namespace Horoshii\UrlShortenerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

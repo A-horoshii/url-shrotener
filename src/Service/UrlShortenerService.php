@@ -1,8 +1,8 @@
 <?php
 
-namespace AHoroshii\UrlShortenerBundle\Service;
+namespace Horoshii\UrlShortenerBundle\Service;
 
-use AHoroshii\UrlShortenerBundle\Entity\ShortUrl;
+use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 use Doctrine\ORM\EntityManager;
 use Hashids\Hashids;
 use Symfony\Component\HttpFoundation\RedirectResponse;
