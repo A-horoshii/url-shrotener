@@ -1,0 +1,16 @@
+services:
+  hashids.hashid_url_shortener:
+    class: Hashids\Hashids
+    public: true
+    arguments:
+      - "%horoshii_url_shortener.hash_salt%"
+      - "%horoshii_url_shortener.hash_min_length%"
+      - "%horoshii_url_shortener.hash_min_alphabet%"
+  horoshii_url_shortener.service.url_shortener:
+    class: AHoroshii\UrlShortenerBundle\Service\UrlShortenerService
+    public: true
+    arguments:
+      - "@hashids.hashid_url_shortener"
+      - "@doctrine.orm.entity_manager"
+      - "@validator"
+      - "%horoshii_url_shortener.check_user_info%"

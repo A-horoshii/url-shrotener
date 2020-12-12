@@ -1,0 +1,19 @@
+{% extends "@AHoroshiiUrlShortener/base.html.twig" %}
+{% block AHoroshii_url_shortener_content %}
+    {% if shortUrl %}
+        <p><b>short url success created</b></p>
+        <a href="{{ shortUrl }}">{{ shortUrl }}</a>
+    {% else %}
+        <form method="post" action="{{ path('AHoroshii_short_url_create') }}">
+            <p><b>Url Shortener</b></p>
+            <p>
+                Url: <input type="url" name="url"></br>
+                TTl in minutes: <input type="number" step="1" pattern="\d+" name="ttl">
+            </p>
+            <p><input type="submit"></p>
+        </form>
+         {% if errors %}
+             {{ errors|dump }}
+         {% endif %}
+    {% endif %}
+{% endblock AHoroshii_url_shortener_content %}
