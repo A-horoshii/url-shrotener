@@ -11,14 +11,6 @@
         "symfony/validator": "^4.4",
         "symfony/yaml": "^4.1|^5.0"
     },
-    "require-dev": {
-    },
-    "config": {
-        "preferred-install": {
-            "*": "dist"
-        },
-        "sort-packages": true
-    },
     "autoload": {
         "psr-4": {
             "Horoshii\\UrlShortenerBundle\\": "src"
@@ -27,23 +19,6 @@
     "autoload-dev": {
         "psr-4": {
             "Horoshii\\UrlShortenerBundle\\Tests\\": "test"
-        }
-    },
-    "replace": {
-        "paragonie/random_compat": "2.*",
-        "symfony/polyfill-ctype": "*",
-        "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php71": "*",
-        "symfony/polyfill-php70": "*",
-        "symfony/polyfill-php56": "*"
-    },
-    "conflict": {
-        "symfony/symfony": "*"
-    },
-    "extra": {
-        "symfony": {
-            "allow-contrib": false,
-            "require": "4.4.*"
         }
     }
 }
