@@ -7,11 +7,14 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 class Configuration implements ConfigurationInterface
 {
+    /**
+     * {@inheritdoc}
+     */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('horoshii_url_shortener');
+        $treeBuilder = new TreeBuilder('url_shortener');
         // BC layer for symfony/config < 4.2
-        $rootNode = method_exists($treeBuilder, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('horoshii_url_shortener');
+        $rootNode = method_exists($treeBuilder, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('url_shortener');
         $rootNode
             ->children()
                 ->integerNode('hash_min_length')->defaultValue(5)->setDeprecated('Url short hash min length')->end()
