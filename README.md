@@ -4,8 +4,17 @@ This bundle adds `/{hash}` endpoints for shortUrl redirect to project.
 
 ## Installation
 
-You can install it via composer: 
+You can install it via composer.json
+ ```
+ "repositories": [
+     {
+         "type": "vcs",
+         "url": "https://github.com/A-horoshii/url-shrotener"
+     }
+ ]
+ ```
 
+add in you project composer.
 ```
 composer require horoshii/url-shortener-bundle dev-master
 ```

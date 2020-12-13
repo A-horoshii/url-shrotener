@@ -34,7 +34,7 @@ class UrlShortenerController extends AbstractController
         $params = [];
         if ($request->isMethod('post')) {
             $url = $request->request->get('url');
-            $ttl= $request->get('ttl');
+            $ttl= (int)$request->get('ttl');
             $shortUrl =  $this->get('horoshii_url_shortener.service.url_shortener')->createShortUrl($url, $ttl);
             if ($shortUrl instanceof ShortUrl) {
                 $params['shortUrl'] = $this->generateUrl(

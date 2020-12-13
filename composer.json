@@ -9,10 +9,11 @@
         "hashids/hashids": "^3.0|^4.0",
         "symfony/framework-bundle": "^4.4|^5.0",
         "symfony/validator": "^4.4",
-        "symfony/yaml": "^4.1|^5.0"
+        "symfony/yaml": "^4.1|^5.0",
+        "symfony/twig-bundle": "4.4.*"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.4",
+        "symfony/maker-bundle": "^1.25",
         "symfony/profiler-pack": "^1.0",
         "symfony/test-pack": "^1.0",
         "symfony/var-dumper": "^4.4"
