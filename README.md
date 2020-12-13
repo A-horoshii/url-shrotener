@@ -39,6 +39,8 @@ php bin/console doctrine:migrations:migrate
 ```
 
 * Configuration routes  `config\routes.yaml` (required)
+
+** In list work filters by redirectQuantity,url,code  example  http://shorttest.local/short_urls?filter[redirectQuantity]=1
 ```yaml
 horoshii_short_url_create:
   controller:  Horoshii\UrlShortenerBundle\Controller\UrlShortenerController:shortUrlCreateAction
@@ -52,3 +54,4 @@ horoshii_short_url_redirect:
   path: /{hash}
   methods: ["GET"]
 ```
+
