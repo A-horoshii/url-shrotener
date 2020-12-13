@@ -54,7 +54,6 @@ class ShortUrl implements ShortUrlInterface
 
     /**
      * @ORM\Column(type="datetime")
-     * @Assert\NotBlank()
      */
     private $timeLifeEnd;
 

@@ -38,7 +38,7 @@ class UrlShortenerController extends AbstractController
             $shortUrl =  $this->get('horoshii_url_shortener.service.url_shortener')->createShortUrl($url, $ttl);
             if ($shortUrl instanceof ShortUrl) {
                 $params['shortUrl'] = $this->generateUrl(
-                    'Horoshii_short_url_redirect',
+                    'horoshii_short_url_create',
                     ['hash' => $shortUrl->getHash()],
                     UrlGeneratorInterface::ABSOLUTE_URL
                 );
@@ -46,7 +46,7 @@ class UrlShortenerController extends AbstractController
                 $params['errors'] = $shortUrl;
             }
         }
-        $this->render('@UrlShortener/ShortUrl/short_url_create.html.twig', $params);
+        return  $this->render('@UrlShortener/ShortUrl/short_url_create.html.twig', $params);
     }
 
 
@@ -61,7 +61,6 @@ class UrlShortenerController extends AbstractController
         }
         $shortUrlsRepository = $this->getDoctrine()->getRepository(ShortUrl::class);
         $shortUrls = $shortUrlsRepository->getShortUrls($queryParams);
-        $shortUrlQuantity = $shortUrlsRepository->getShortUrlsCount($queryParams);
-        $this->render('', ['shortUrls'=>$shortUrls, 'shortUrlQuantity'=>$shortUrlQuantity]);
+        return $this->render('@UrlShortener/ShortUrl/short_url_list.html.twig', ['shortUrls'=>$shortUrls]);
     }
 }

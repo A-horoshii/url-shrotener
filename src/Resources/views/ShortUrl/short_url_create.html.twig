@@ -1,10 +1,10 @@
-{% extends "@HoroshiiUrlShortener/base.html.twig" %}
+{% extends "@UrlShortener/base.html.twig" %}
 {% block Horoshii_url_shortener_content %}
-    {% if shortUrl %}
+    {% if shortUrl is defined %}
         <p><b>short url success created</b></p>
         <a href="{{ shortUrl }}">{{ shortUrl }}</a>
     {% else %}
-        <form method="post" action="{{ path('Horoshii_short_url_create') }}">
+        <form method="post" action="{{ path('horoshii_short_url_create') }}">
             <p><b>Url Shortener</b></p>
             <p>
                 Url: <input type="url" name="url"></br>
@@ -12,8 +12,8 @@
             </p>
             <p><input type="submit"></p>
         </form>
-         {% if errors %}
-             {{ errors|dump }}
-         {% endif %}
+        {% if errors is defined %}
+
+        {% endif %}
     {% endif %}
 {% endblock Horoshii_url_shortener_content %}

@@ -62,13 +62,11 @@ class UrlShortenerService
         $shortUrl->setUrl($url);
         $shortUrl->setCreatedAt(new \DateTime());
         $shortUrl->setTtl($ttl);
-        if ($ttl) {
-            $shortUrl->setTimeLifeEnd($nowDateTime->modify('+ '. $ttl .' minutes'));
-        }
         $errors = $this->validator->validate($shortUrl);
         if ($errors->count()>0) {
             return $errors;
         } else {
+            $shortUrl->setTimeLifeEnd($nowDateTime->modify('+ '. $shortUrl->getTtl() .' minutes'));
             $this->em->persist($shortUrl);
             $this->em->flush();
             $hash = $this->hashids->encode($shortUrl->getId());
