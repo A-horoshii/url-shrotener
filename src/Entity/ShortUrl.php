@@ -16,7 +16,7 @@ class ShortUrl implements ShortUrlInterface
      * @var int
      *
      * @ORM\Id
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="bigint")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
@@ -47,11 +47,10 @@ class ShortUrl implements ShortUrlInterface
     private $createdAt;
 
     /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank()
+     * @var int
      * @Assert\GreaterThan(0)
      */
-    private $ttl;
+    private $ttl = 60;
 
     /**
      * @ORM\Column(type="datetime")
