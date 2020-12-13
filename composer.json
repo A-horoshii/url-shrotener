@@ -12,7 +12,7 @@
         "symfony/yaml": "^4.1|^5.0"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.4", ,
+        "symfony/maker-bundle": "^1.4",
         "symfony/profiler-pack": "^1.0",
         "symfony/test-pack": "^1.0",
         "symfony/var-dumper": "^4.4"
