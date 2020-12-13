@@ -11,6 +11,6 @@ interface  ShortUrlInterface
     public function getRedirectQuantity(): int;
     public function addRedirectQuantity($inc = 1);
     public function getTimeLifeEnd(): ?\DateTimeInterface;
-    public function setTtl($ttl);
+    public function setTtl(int $ttl);
     public function getTtl():int;
 }
