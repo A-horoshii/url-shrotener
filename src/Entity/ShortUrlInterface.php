@@ -10,7 +10,7 @@ interface  ShortUrlInterface
     public function setHash($hash);
     public function getRedirectQuantity(): int;
     public function addRedirectQuantity($inc = 1);
-    public function getTimeLifeEnd(): \DateTimeInterface;
+    public function getTimeLifeEnd(): ?\DateTimeInterface;
     public function setTtl($ttl);
     public function getTtl():int;
 }
