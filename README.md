@@ -32,7 +32,11 @@ php bin/console doctrine:migrations:migrate
 ```yaml
 horoshii_short_url_create:
   controller:  Horoshii\UrlShortenerBundle\Controller\UrlShortenerController:shortUrlCreateAction
-  path: /short_create
+  path: /short_urls/create
+horoshii_short_url_list:
+  controller:  Horoshii\UrlShortenerBundle\Controller\UrlShortenerController:shortUrlListAction
+  path: /short_urls
+  methods: ["GET"]
 horoshii_short_url_redirect:
   controller:  Horoshii\UrlShortenerBundle\Controller\UrlShortenerController:shortUrlRedirectAction
   path: /{hash}

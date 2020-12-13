@@ -15,7 +15,7 @@
         {% if errors is defined %}
             <p style="color:#FF0000"><b>Errors</b></p>
             {% for error in errors %}
-                <p style="color:#FF0000">{{ error.path }}-{{ error.message }}</p>
+                <p style="color:#FF0000">{{ error.propertyPath }}-{{ error.message }}</p>
             {% endfor %}
         {% endif %}
     {% endif %}

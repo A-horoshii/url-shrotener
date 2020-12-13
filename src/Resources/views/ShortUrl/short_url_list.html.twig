@@ -10,7 +10,7 @@
         </tr>
         {% for shortUrl in shortUrls %}
             <tr>
-                <th>{{ path('horoshii_short_url_redirect', { 'hash': shortUrl.hash }) }}</th>
+                <th>{{ url('horoshii_short_url_redirect', { 'hash': shortUrl.hash }) }}</th>
                 <th>{{ shortUrl.url }}</th>
                 <th>{{ shortUrl.redirectQuantity}}</th>
             </tr>
