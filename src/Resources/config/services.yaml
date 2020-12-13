@@ -5,7 +5,7 @@ services:
     arguments:
       - "%url_shortener.hash_salt%"
       - "%url_shortener.hash_min_length%"
-      - "%url_shortener.hash_min_alphabet%"
+      - "%url_shortener.hash_alphabet%"
   horoshii_url_shortener.service.url_shortener:
     class: Horoshii\UrlShortenerBundle\Service\UrlShortenerService
     public: true
