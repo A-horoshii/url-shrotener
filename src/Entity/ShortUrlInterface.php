@@ -1,7 +1,7 @@
 <?php
 namespace Horoshii\UrlShortenerBundle\Entity;
 
-interface  ShortUrlInterface
+interface ShortUrlInterface
 {
     public function getId();
     public function getUrl();

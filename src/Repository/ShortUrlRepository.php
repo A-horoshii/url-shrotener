@@ -2,9 +2,9 @@
 
 namespace Horoshii\UrlShortenerBundle\Repository;
 
-use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
+use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 
 /**
  * @method ShortUrl|null find($id, $lockMode = null, $lockVersion = null)
@@ -19,7 +19,7 @@ class ShortUrlRepository extends EntityRepository
         'code',
     ];
 
-    private  $shortUrlFieldsInt = [
+    private $shortUrlFieldsInt = [
         'id',
         'redirectQuantity'
     ];

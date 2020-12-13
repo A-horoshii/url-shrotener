@@ -2,14 +2,13 @@
 
 namespace Horoshii\UrlShortenerBundle\Service;
 
-use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 use Doctrine\ORM\EntityManager;
 use Hashids\Hashids;
+use Horoshii\UrlShortenerBundle\Entity\ShortUrl;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
-
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class UrlShortenerService
 {
@@ -46,7 +45,6 @@ class UrlShortenerService
         if ($defaultTtl) {
             $this->defaultTtl = $defaultTtl;
         }
-
     }
 
     /**
