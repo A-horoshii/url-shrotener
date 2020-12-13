@@ -1,3 +1,22 @@
-{% extends "@HoroshiiUrlShortener/base.html.twig" %}
+{% extends "@UrlShortener/base.html.twig" %}
 {% block Horoshii_url_shortener_content %}
+    <p><b>Url List (200 last)</b></p>
+    {% if shortUrls is defined and shortUrls|length>0 %}
+        <table>
+        <tr>
+            <th>Short Url</th>
+            <th>URL</th>
+            <th>Redirect quantity</th>
+        </tr>
+        {% for shortUrl in shortUrls %}
+            <tr>
+                <th>{{ path('horoshii_short_url_redirect', { 'hash': shortUrl.hash }) }}</th>
+                <th>{{ shortUrl.url }}</th>
+                <th>{{ shortUrl.redirectQuantity}}</th>
+            </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        Short Urls not added
+    {% endif %}
 {% endblock Horoshii_url_shortener_content %}

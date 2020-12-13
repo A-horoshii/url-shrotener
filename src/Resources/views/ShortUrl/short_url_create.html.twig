@@ -8,12 +8,15 @@
             <p><b>Url Shortener</b></p>
             <p>
                 Url: <input type="url" name="url"></br>
-                TTl: <input type="number" step="1" pattern="\d+" name="ttl">
+                TTl in minutes: <input type="number" step="1" pattern="\d+" name="ttl">
             </p>
             <p><input type="submit"></p>
         </form>
         {% if errors is defined %}
-
+            <p style="color:#FF0000"><b>Errors</b></p>
+            {% for error in errors %}
+                <p style="color:#FF0000">{{ error.path }}-{{ error.message }}</p>
+            {% endfor %}
         {% endif %}
     {% endif %}
 {% endblock Horoshii_url_shortener_content %}

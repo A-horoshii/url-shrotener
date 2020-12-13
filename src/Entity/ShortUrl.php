@@ -22,7 +22,7 @@ class ShortUrl implements ShortUrlInterface
 
     /**
      * @var string
-     * @ORM\Column(name="hash", type="string", unique=true, nullable=true)
+     * @ORM\Column(name="hash", type="string", length=191, unique=true, nullable=true)
      */
     protected $hash;
 
